@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+# working-tree folders created next to eval/ (see README)
+/third_party/
+/weights/
+/data/
+/results/main/
+/results/tum_family/
+/results/tum_ref/
+.vscode/
+.idea/

@@ -1,0 +1,9 @@
+{
+    "TUM-Ref": {
+        "path": "extra/TUM-Ref",
+        "width": 640,
+        "height": 480,
+        "split": ".index.txt",
+        "depth_unit": 1.0
+    }
+}
