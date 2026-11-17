@@ -1,16 +1,19 @@
 # DIMED: DIagnosing MEtric Depth
 
-**DIMED** evaluates single-image metric depth models image by image instead of only by dataset averages. For every image it keeps the metric error, the error after a single global scale alignment (structure), and the alignment scale `s*` itself. It then reports:
+**DIMED** evaluates single-image metric depth models image by image instead of only by dataset averages. For every image it keeps the metric error, the error after a single global scale alignment (structure), and the alignment scale `s`* itself. It then reports:
 
 - **failure rate**: the share of images whose metric δ1 < 0.5;
-- **structure vs. scale**: scale-aligned δ1 / Rel for structure, and three statistics of `ln s*` for scale: **bias** (signed: is depth over- or underestimated?), **dispersion** (does the error change from image to image?) and **absolute error**;
+- **structure vs. scale**: scale-aligned δ1 / Rel for structure, and three statistics of `ln s`* for scale: **bias** (signed: is depth over- or underestimated?), **dispersion** (does the error change from image to image?) and **absolute error**;
 - **shared vs. model-specific failures**: for each image, how many models fail on it.
 
 This is the code and data of the paper
 
-> **What the Averages Hide: Monocular Metric Depth Models Still Fail in Everyday Scenes, Mostly on Scale**<br>
-> [Hualie Jiang](https://hualie.github.io/)<sup>1</sup>, Yujie Luo<sup>1,2</sup>, Ziyang Song<sup>1</sup>, Ximeng Li<sup>1</sup>, Zhiqiang Lou<sup>1</sup>, Rui Xu<sup>1</sup><br>
-> <sup>1</sup>Antigravity Tech, Insta360 &nbsp; <sup>2</sup>Nanyang Technological University<br>
+> **What the Averages Hide: Monocular Metric Depth Models Still Fail in Everyday Scenes, Mostly on Scale**  
+>
+> [Hualie Jiang](https://hualie.github.io/)1, Yujie Luo1,2, Ziyang Song1, Ximeng Li1, Zhiqiang Lou1, Rui Xu1  
+>
+> 1Antigravity Tech, Insta360   2Nanyang Technological University  
+>
 > [arXiv](https://arxiv.org/abs/2611.20518) · [Project page](https://antigravity-tech.github.io/DIMED/) · [Data on Hugging Face](https://huggingface.co/datasets/hljiang/DIMED)
 
 The evaluation imports MoGe's data loader and metrics from an unmodified upstream [MoGe](https://github.com/microsoft/MoGe) checkout and adds adapters for 11 models.
